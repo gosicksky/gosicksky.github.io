@@ -32,7 +32,7 @@ weather_df <- ny_noaa %>%
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart A
+### The number of snow day in every month in NY in 2010
 
 ```{r bar}
 #the number of snow day in every month in 2010 in NY
@@ -55,7 +55,6 @@ snow_complete_df <-
   
 plot_ly(snow_complete_df,x = ~month, y = ~num, color = ~month, type = "bar", colors = "viridis") %>%
   layout(
-    title = "Tthe number of snow day in every month in NY in 2010",
     xaxis = list(title = "Month"),
     yaxis = list(title = "Number")
   )
@@ -64,20 +63,19 @@ plot_ly(snow_complete_df,x = ~month, y = ~num, color = ~month, type = "bar", col
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of the max temperature of every month in NY in 2010
 
 ```{r box}
 #box plot for the max temperature of every month
 weather_df %>%
   plot_ly(y = ~tmax / 10, color = ~month, type = "box", colors = "viridis") %>%
   layout(
-    title = "Distribution of the max temperature of every month in NY in 2010",
     xaxis = list(title = "Month"),
     yaxis = list(title = "Temperature (°C)")
   )
 ```
 
-### Chart C
+### The average max and min temperature everyday in 2010 in NY
 
 ```{r line}
 #line for the average max and min temperature everyday in NY in 2010
@@ -96,7 +94,6 @@ line_data %>%
   add_trace(x = ~date, y = ~average_tmax / 10, name = "Average Max Temperature") %>% 
   add_trace(x = ~date, y = ~average_tmin / 10, name = 'Average Min Temperature') %>%
   layout(
-    title = "The average max and min temperature everyday in 2010 in NY",
     xaxis = list(title = "Date"),
     yaxis = list(title = "Temperature (°C)")
   )
