@@ -32,7 +32,7 @@ weather_df <- ny_noaa %>%
 Column {data-width=500}
 -----------------------------------------------------------------------
 
-### The number of snow day in every month in NY in 2010
+### The number of snow day every month in NY in 2010
 
 ```{r bar}
 #the number of snow day in every month in 2010 in NY
