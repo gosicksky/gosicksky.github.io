@@ -75,7 +75,7 @@ weather_df %>%
   )
 ```
 
-### The average max and min temperature everyday in 2010 in NY
+### The everyday average max and min temperature in NY in 2010
 
 ```{r line}
 #line for the average max and min temperature everyday in NY in 2010
