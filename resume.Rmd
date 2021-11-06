@@ -1,0 +1,63 @@
+---
+title: "My resume"
+---
+
+[Download](https://drive.google.com/file/d/1jqk9DnFH0UIIeWKdIDeXF9lfp9cupmeq/view?usp=sharing)
+
+<font size='5'><b>EDUCATION</b></font>
+————————————————————————————————————————————————————————————————————————————————————————
+<b>Peking University, School of Electronics Engineering and Computer Science</b>
+
+<i>B.S. in Data Science and Big Data Technology Minor: Economics</i>
+
+<b>Columbia University in the City of New York, Mailman School of Public Health</b>
+
+<i>M.S. in Biostatistics</i>
+
+
+<font size='5'><b>RESEARCH EXPERIENCE</b></font>
+————————————————————————————————————————————————————————————————————————————————————————
+<i>Peking University (PKU), Key Lab of High Confidence Software Technologies, Adviser Dr. Haiou Jiang</i>                                                                     
+
+<b>Project I: Machine Learning Based Rumor Detection from Social Media  Research Assistant</b>
+
+- Get public data from a Chinese news and information content platform
+- Process and prepare data for machine learning 
+
+<b>Project II: Anti-money Laundering in Bitcoin  Algorithm Lead</b>
+
+- Identify suspicious transactions based on a given public dataset using machine learning algorithms
+- Realize the visualization of trading networks
+- Analyze the public full Bitcoin transaction data
+- Apply algorithms to full Bitcoin transactions
+
+
+<font size='5'><b>INTERNSHIP EXPERIENCE</b></font>
+————————————————————————————————————————————————————————————————————————————————————————
+<b>Deloitte Touche Tohmatsu Limited, Intern, Risk Advisory	, Shanghai, China</b> 
+
+- Translate documents to assist the report of the team
+- Sort out and analyze the recent financial statement data of all A-share listed companies
+- Use Excel to do quantitative analysis to help to establish an evaluation model of enterprises
+
+
+<font size='5'><b>PROJECTS EXPERIENCE</b></font>
+————————————————————————————————————————————————————————————————————————————————————————
+<b>Mathematical Contest In Modeling, Team Leader, Shanghai, China</b>
+
+- Set up a team of three people, determine the topic
+- Do C++ programming to solve problems, like bin-packing problem
+
+<b>Deloitte Digital Difference Camp, Team Leader of Four, Shanghai, China</b>
+
+- Research and propose the project of corporate solvency portrait according to the theme
+- Get the latest public financial statement data of all A-share listed companies, and use Python to clean and summarize the available data
+- Build an website of enterprise data query and comparison and use PHP to write a back-end program 
+- Complete introduction videos of the team project, enter the top10 (531 teams in total) and report to Deloitte executives
+
+
+<font size='5'><b>SKILLSET & INTERESTS</b></font>
+————————————————————————————————————————————————————————————————————————————————————————
+<b>Programming languages:</b> Python, C/C++ , SQL, Stata
+
+<b>Others:</b> Coding, problem solving, communication, Piano, Go, Slow Pitch

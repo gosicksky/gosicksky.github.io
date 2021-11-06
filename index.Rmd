@@ -1,0 +1,10 @@
+---
+output: html_document
+---
+<center><img src="picture/baseball.jpeg" style="width:80%"></center>
+
+<font size='7'><b><center>Hi, this is Keming Zhang</center></b></font>
+
+<font size='5'><b><center>A student</center></b></font>
+
+<center>[Read more about me](resume.html)</center>

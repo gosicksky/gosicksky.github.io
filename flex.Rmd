@@ -1,0 +1,104 @@
+---
+title: Flex Dashboard
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup,include=FALSE}
+library(flexdashboard)
+library(p8105.datasets)
+library(plotly)
+library(tidyverse)
+```
+
+```{r dataset}
+data("ny_noaa")
+#to filter those with no na in every day in 2010
+weather_df <- ny_noaa %>%
+  filter(date >= '2010-01-01' & date <= '2010-12-31') %>%
+  mutate(
+    date_separate = date
+  ) %>%
+  separate(date_separate, c("year","month","day"), sep = "-") %>%
+  mutate(
+    tmin = as.numeric(tmin),
+    tmax = as.numeric(tmax)
+  )
+```
+
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r bar}
+#the number of snow day in every month in 2010 in NY
+snow_df <- weather_df %>%
+  filter(snow > 0) %>%
+  distinct(month,day) %>%
+  group_by(month) %>%
+  summarize(
+    num = n()
+  )
+  
+snow_complete_df <- 
+  tibble(
+    month = c("01","02","03","04","05","06","07","08","09","10","11","12")
+  ) %>%
+  left_join(snow_df,month = month) %>%
+  mutate(
+    num = ifelse(is.na(num),0,num)
+  )
+  
+plot_ly(snow_complete_df,x = ~month, y = ~num, color = ~month, type = "bar", colors = "viridis") %>%
+  layout(
+    title = "Tthe number of snow day in every month in NY in 2010",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Number")
+  )
+```
+
+Column {data-width=500}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r box}
+#box plot for the max temperature of every month
+weather_df %>%
+  plot_ly(y = ~tmax / 10, color = ~month, type = "box", colors = "viridis") %>%
+  layout(
+    title = "Distribution of the max temperature of every month in NY in 2010",
+    xaxis = list(title = "Month"),
+    yaxis = list(title = "Temperature (°C)")
+  )
+```
+
+### Chart C
+
+```{r line}
+#line for the average max and min temperature everyday in NY in 2010
+line_data <- weather_df %>%
+  group_by(date) %>%
+  mutate(
+    average_tmax = mean(tmax, na.rm = TRUE),
+    average_tmin = mean(tmin, na.rm = TRUE)
+  ) %>% 
+  select(date,average_tmax,average_tmin) %>%
+  distinct()
+
+line_data %>%
+  ungroup() %>%
+  plot_ly(type = "scatter", mode = "lines") %>%
+  add_trace(x = ~date, y = ~average_tmax / 10, name = "Average Max Temperature") %>% 
+  add_trace(x = ~date, y = ~average_tmin / 10, name = 'Average Min Temperature') %>%
+  layout(
+    title = "The average max and min temperature everyday in 2010 in NY",
+    xaxis = list(title = "Date"),
+    yaxis = list(title = "Temperature (°C)")
+  )
+```
+
