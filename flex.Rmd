@@ -14,8 +14,8 @@ library(tidyverse)
 ```
 
 ```{r dataset}
+#dataset in 2010
 data("ny_noaa")
-#to filter those with no na in every day in 2010
 weather_df <- ny_noaa %>%
   filter(date >= '2010-01-01' & date <= '2010-12-31') %>%
   mutate(
@@ -44,6 +44,7 @@ snow_df <- weather_df %>%
     num = n()
   )
   
+#add those months with no snowy days
 snow_complete_df <- 
   tibble(
     month = c("01","02","03","04","05","06","07","08","09","10","11","12")
